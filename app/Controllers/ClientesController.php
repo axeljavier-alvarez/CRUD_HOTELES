@@ -33,9 +33,17 @@ class ClientesController extends BaseController {
             'contrasenia'=>$this->request->getVar('txtPassword')
         ];
 
-        $clientes->insert($datos);
-        echo "<br>Datos guardados";
-        echo "<br><a href='ver_clientes'>Regresar</a>";
+        if ($clientes->insert($datos)) {
+            // Agregar parámetro para mensaje de éxito
+            return redirect()->to('ver_clientes')->with('exito', 'Cliente agregado correctamente');
+        } else {
+            // Manejar error de inserción (opcional)
+            return redirect()->to('ver_clientes')->with('error', 'No se pudo agregar al cliente, intentelo de nuevo');
+        } 
+
     }
+
+    
+    
 }
 ?>
