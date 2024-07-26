@@ -37,6 +37,10 @@
         width: 180px;
 
     }
+
+    #logoReservacion {
+        width: 75px;
+    }
 </style>
 
 <body>
@@ -57,7 +61,10 @@
             <li><a href="http://localhost/fs2024/ci4_hoteles/public/">Inicio</a></li>
             <li><a href="ver_clientes">Clientes</a></li>
             <li><a href="ver_hoteles">Hoteles</a></li>
-            <li><a href="ver_reservaciones">Reservaciones</a></li>
+            <li><a href="ver_reservaciones">
+                Reservaciones
+            </a>
+        </li>
         </ul>
     </nav>
 
