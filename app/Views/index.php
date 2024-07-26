@@ -74,28 +74,6 @@
             <!-- End of Col-md-12 -->
 
             <div id="carouselExample" class="carousel slide" data-ride="carousel">
-
-                <ol class="carousel-indicators">
-
-                    <li data-target="#carouselExample" data-slide-to="0" class="active">
-
-                        <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Slider 1&font=noto" alt="First slide">
-
-                    </li>
-
-                    <li data-target="#carouselExample" data-slide-to="1">
-
-                        <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Slider 2&font=noto" alt="Second slide">
-
-                    </li>
-
-                    <li data-target="#carouselExample" data-slide-to="2">
-
-                        <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Slider 3&font=noto" alt="Third slide">
-
-                    </li>
-
-                </ol>
                 <!-- Carousel Indicators -->
 
                 <div class="carousel-inner">
@@ -106,9 +84,9 @@
 
                         <div class="carousel-caption">
 
-                            <h5>Firstsadf slide label</h5>
+                            <h5>Bienvenido a nuestro sitio web</h5>
 
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <p>Trabajamos en siempre tener una forma fácil e intuitiva para nuestro usuario</p>
 
                         </div>
 
@@ -124,9 +102,9 @@
 
                         <div class="carousel-caption">
 
-                            <h5>Second slide label</h5>
+                            <h5>Personal</h5>
 
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <p>Contamos con personal capacitado para el manejo de tu Hospedaje y gestion.</p>
 
                         </div>
 
@@ -139,9 +117,9 @@
 
                         <div class="carousel-caption">
 
-                            <h5>Third slide label</h5>
+                            <h5>Eventos</h5>
 
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <p>Puedes hacer tu evento o reservar uno de los hoteles gestionados</p>
 
                         </div>
 
