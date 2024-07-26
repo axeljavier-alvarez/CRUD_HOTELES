@@ -1,0 +1,358 @@
+CRITICAL - 2024-07-26 15:32:42 --> ErrorException: Undefined variable $hoteles
+[Method: GET, Route: ver_reservaciones]
+in APPPATH\Views\reservaciones.php on line 110.
+ 1 APPPATH\Views\reservaciones.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hoteles', 'C:\\xampp\\htdocs\\fs2024\\ci4_hoteles\\app\\Views\\reservaciones.php', 110)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\ci4_hoteles\\app\\Views\\reservaciones.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('reservaciones', [], true)
+ 5 APPPATH\Controllers\ReservacionesController.php(13): view('reservaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-26 16:26:15 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `re...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hoteles\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hoteles\app\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('1')
+#8 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hoteles\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-26 16:26:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_reservacion/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:26:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:26:15 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-26 16:26:36 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `re...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hoteles\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hoteles\app\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('2')
+#8 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hoteles\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-26 16:26:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_reservacion/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:26:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:26:36 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('2')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-26 16:27:22 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `re...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hoteles\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hoteles\app\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('1')
+#8 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hoteles\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-26 16:27:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_reservacion/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:27:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:27:22 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-26 16:27:31 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `re...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hoteles\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hoteles\app\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('5')
+#8 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hoteles\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-26 16:27:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_reservacion/5]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('5')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:27:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('5')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:27:31 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('5')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-26 16:28:19 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `re...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hoteles\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hoteles\app\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('5')
+#8 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hoteles\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hoteles\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hoteles\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-26 16:28:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_reservacion/5]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('5')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:28:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('5')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:28:19 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ReservacionesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->eliminarReservacion('5')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 16:35:53 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: ver_reservaciones]
+in APPPATH\Views\reservaciones.php on line 89.
+ 1 APPPATH\Views\reservaciones.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\fs2024\\ci4_hoteles\\app\\Views\\reservaciones.php', 89)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\ci4_hoteles\\app\\Views\\reservaciones.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('reservaciones', [], true)
+ 5 APPPATH\Controllers\ReservacionesController.php(14): view('reservaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

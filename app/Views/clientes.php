@@ -24,7 +24,7 @@
 
     .card {
         color: white;
-        background-color: #201c3c;
+        background-image: linear-gradient(to bottom, #295b9c 0%, #0A072E 100%);
         text-align: center;
         /* Color del borde */
     }
@@ -35,9 +35,10 @@
     }
 
     .imgFormulario {
-        width: 50px;
+        width: 180px;
 
     }
+    
 </style>
 
 <body>
@@ -58,8 +59,8 @@
         <ul>
             <li><a href="http://localhost/fs2024/ci4_hoteles/public/">Inicio</a></li>
             <li><a href="ver_clientes">Clientes</a></li>
-            <li><a href="">Hoteles</a></li>
-            <li><a href="">Reservaciones</a></li>
+            <li><a href="ver_hoteles">Hoteles</a></li>
+            <li><a href="ver_reservaciones">Reservaciones</a></li>
         </ul>
     </nav>
     <br>
@@ -67,7 +68,7 @@
     <div class="container">
         <center>
             <h1>Clientes</h1>
-            <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalAgregarClientes">
+            <button class="btn btn-success nuevoCliente" type="button" data-bs-toggle="modal" data-bs-target="#modalAgregarClientes">
                 Agregar clientes
             </button>
         </center>
@@ -99,7 +100,7 @@
                     <div class="card">
                         <br>
                         <center>
-                            <img src="https://www.shutterstock.com/image-vector/customer-care-icon-social-help-600nw-1921058849.jpg" class="card-img-top imgFormulario">
+                            <img src="https://img.freepik.com/vector-premium/ilustracion-color-rgb-semi-plano-clasificacion-hotel-cliente-retroalimentacion-cliente-clientes-recepcion-evaluacion-calidad-clasificacion-concepto-revision-personaje-dibujos-animados-aislado-blanco_151150-4331.jpg" class="card-img-top imgFormulario">
 
                         </center>
                         <div class="card-body">
@@ -117,8 +118,11 @@
                         </div>
 
                         <div class="card-footer">
-                            <button class="btn btn-primary">Editar</button>
-                            <button class="btn btn-danger">Eliminar</button>
+                            <button class="btn btn-outline-primary">Editar</button>
+
+                            <a href="<?= base_url('eliminar_cliente/') . $cliente['cliente_id']; ?>" class="btn btn-outline-danger">
+                                Eliminar
+                            </a>
 
                         </div>
                     </div>
