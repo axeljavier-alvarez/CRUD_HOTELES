@@ -1,0 +1,197 @@
+CRITICAL - 2024-07-27 17:41:40 --> ParseError: syntax error, unexpected token "echo"
+[Method: GET, Route: ver_clientes]
+in APPPATH\Views\clientes.php on line 62.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('clientes', [], true)
+ 3 APPPATH\Controllers\ClientesController.php(14): view('clientes', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 21:51:42 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: buscar_cliente/1]
+in APPPATH\Views\clientes.php on line 142.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(57): view('clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->buscarCliente('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 21:53:28 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: buscar_cliente/1]
+in APPPATH\Views\clientes.php on line 142.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(57): view('clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->buscarCliente('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 21:54:01 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: buscar_cliente/2]
+in APPPATH\Views\clientes.php on line 143.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(57): view('clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->buscarCliente('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:29:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_modificar_reservaciones.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_modificar_reservaciones.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_reservaciones', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('form_modificar_reservaciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:30:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_modificar_reservaciones.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_modificar_reservaciones.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_reservaciones', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('form_modificar_reservaciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:30:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_modificar_reservaciones.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_modificar_reservaciones.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_reservaciones', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('form_modificar_reservaciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:30:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_modificar_clientes.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_modificar_clientes.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('form_modificar_clientes', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:31:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "nuevo.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nuevo.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('nuevo', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('nuevo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:32:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "nuevo.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nuevo.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('nuevo', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('nuevo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:32:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "nuevo.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nuevo.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('nuevo', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('nuevo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:33:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "nuevo.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nuevo.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('nuevo.php', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('nuevo.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:34:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_modificar_clientes.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_modificar_clientes.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('form_modificar_clientes', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:35:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_modificar_reservaciones.php"
+[Method: GET, Route: buscar_reservacion/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_modificar_reservaciones.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_reservaciones', [], true)
+ 3 APPPATH\Controllers\ReservacionesController.php(52): view('form_modificar_reservaciones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:36:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "formulario.php"
+[Method: GET, Route: buscar_cliente/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('formulario.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('formulario', [], true)
+ 3 APPPATH\Controllers\ClientesController.php(55): view('formulario', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->buscarCliente('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-27 23:38:29 --> ErrorException: Undefined array key "nombre"
+[Method: GET, Route: buscar_reservacion/2]
+in APPPATH\Views\form_modificar_cliente.php on line 123.
+ 1 APPPATH\Views\form_modificar_cliente.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\fs2024\\ci4_hoteles\\app\\Views\\form_modificar_cliente.php', 123)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\ci4_hoteles\\app\\Views\\form_modificar_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_cliente', [], true)
+ 5 APPPATH\Controllers\ReservacionesController.php(52): view('form_modificar_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->buscarReservacion('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

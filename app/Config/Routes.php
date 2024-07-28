@@ -29,9 +29,15 @@ $routes->get('eliminar_hotel/(:num)','HotelesController::eliminarHotel/$1');
 // 3. Eliminar Reservacion
 $routes->get('eliminar_reservacion/(:num)','ReservacionesController::eliminarReservacion/$1');
 
+/* --------- RUTAS DE ACTUALIZAR ------- */
+$routes->get('buscar_cliente/(:num)', 'ClientesController::buscarCliente/$1');
+$routes->post('modificar_cliente', 'ClientesController::modificarCliente');
 
+$routes->get('buscar_hotel/(:num)', 'HotelesController::buscarHotel/$1');
+$routes->post('modificar_hotel', 'HotelesController::modificarHotel');
 
-
+$routes->get('buscar_reservacion/(:num)', 'ReservacionesController::buscarReservacion/$1');
+$routes->post('modificar_reservacion', 'ReservacionesController::modificarReservacion');
 
 
 
